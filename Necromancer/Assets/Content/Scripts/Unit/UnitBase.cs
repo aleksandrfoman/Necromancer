@@ -16,14 +16,12 @@ namespace Content.Scripts.Unit
 
         private void Awake()
         {
-            unitMovement.Init(transform);
             unitStateMachine.Init(this);
             
         }
         public void Init(Player player)
         {
             this.player = player;
-
         }
     }
 }

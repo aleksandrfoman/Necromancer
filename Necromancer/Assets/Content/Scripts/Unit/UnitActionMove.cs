@@ -10,13 +10,17 @@ namespace Content.Scripts.Unit
         public override void ProcessState()
         {
             Machine.Movement.SetTarget(target.position);
-            if (Machine.Movement.CheckDistanceToTarget(0.1f))
+       
+            Machine.Movement.Gravity();
+            Machine.Movement.Rotate(Machine.Player.PlayerMovement.Forward);
+            Machine.Movement.Move();
+            if (Machine.Movement.IsMove)
             {
-                Machine.UnitAnimator.PlayIdle();
+                Machine.UnitAnimator.PlayRun();
             }
             else
             {
-                Machine.UnitAnimator.PlayRun();
+                Machine.UnitAnimator.PlayIdle();
             }
         }
     }
