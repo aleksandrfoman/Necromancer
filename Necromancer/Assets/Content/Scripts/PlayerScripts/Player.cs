@@ -13,6 +13,7 @@ namespace Content.Scripts.PlayerScripts
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private PlayerAnimator playerAnimator;
         [SerializeField] private PlayerFollow playerFollow;
+        [SerializeField] private PlayerBar playerBar;
         
         [SerializeField] private PlayerStateMachine stateMachine;
 

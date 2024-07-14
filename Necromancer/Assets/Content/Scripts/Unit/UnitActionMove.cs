@@ -4,13 +4,9 @@ namespace Content.Scripts.Unit
 {
     public class UnitActionMove : UnitActionBase
     {
-        [SerializeField]
-        private Transform target;
-        
         public override void ProcessState()
         {
-            Machine.Movement.SetTarget(target.position);
-       
+            Machine.Movement.SetTarget(Machine.Player.transform.position);
             Machine.Movement.Gravity();
             Machine.Movement.Rotate(Machine.Player.PlayerMovement.Forward);
             Machine.Movement.Move();

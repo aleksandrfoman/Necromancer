@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 204870377614801780}
   - component: {fileID: 204870377614801781}
   - component: {fileID: 204870377614801785}
+  - component: {fileID: 1632325314}
   m_Layer: 0
   m_Name: PlayerSkeleton
   m_TagString: Untagged
@@ -141,9 +142,11 @@ MonoBehaviour:
     stateAction: {fileID: 204870377614801780}
   - stateType: 2
     stateAction: {fileID: 204870377614801781}
-  startAction: 2
+  - stateType: 3
+    stateAction: {fileID: 1632325314}
+  startAction: 3
   currentAction: {fileID: 204870377614801780}
-  lastStateKey: 2
+  lastStateKey: 3
 --- !u!114 &204870377614801780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +182,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35ab5862288a31746b353391b7ce7b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1632325314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204870377614801777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc42c5a31c7f6249bb7cd31c68ad026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &506340552518384195

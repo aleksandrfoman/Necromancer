@@ -9,19 +9,24 @@ namespace Content.Scripts.Unit
         public UnitAnimator UnitAnimator => unitAnimator;
         public Player Player => player;
         
+        
+        
         [SerializeField] private UnitMovement unitMovement;
         [SerializeField] private UnitAnimator unitAnimator;
-        [SerializeField] private UnitStateMachine unitStateMachine;
-        [SerializeField] private Player player;
-
-        private void Awake()
-        {
-            unitStateMachine.Init(this);
-            
-        }
+        [SerializeField] private UnitStateMachine unitStateMachine; 
+        private Player player;
+        
         public void Init(Player player)
         {
             this.player = player;
+            unitStateMachine.Init(this);
         }
+    }
+
+    public enum EUnityType
+    {
+        Player,
+        Enemy,
+        DeadBody
     }
 }

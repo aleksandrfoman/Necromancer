@@ -5,6 +5,7 @@ namespace Content.Scripts.Unit
     {
         Idle = 0,
         Spawn = 1,
-        Move = 2
+        Move = 2,
+        DeadBody = 3
     }
 }
