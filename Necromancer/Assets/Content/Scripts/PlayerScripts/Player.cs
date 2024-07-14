@@ -12,15 +12,12 @@ namespace Content.Scripts.PlayerScripts
         
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private PlayerAnimator playerAnimator;
+        [SerializeField] private PlayerFind playerFind;
         [SerializeField] private PlayerFollow playerFollow;
         [SerializeField] private PlayerBar playerBar;
         
         [SerializeField] private PlayerStateMachine stateMachine;
-
-        private void Awake()
-        {
-            Init();
-        }
+        
         public void Init()
         {
             playerFollow.Init(transform);

@@ -7,14 +7,24 @@ namespace Content.Scripts.Unit
     public class UnitMovement
     {
         public bool IsMove => rigidbody.velocity.magnitude >= 0.75f;
-        
+
+        [SerializeField] private Collider collider;
         [SerializeField] private Rigidbody rigidbody;
         [SerializeField] private Transform meshRotator;
         [SerializeField] private Vector3 target;
         [SerializeField] private float speed;
         [SerializeField] private float rotateSpeed;
-        
-     
+
+
+        public void EnableMovement(bool value)
+        {
+            rigidbody.isKinematic = true;
+        }
+
+        public void EnableCollider(bool value)
+        {
+            collider.enabled = value;
+        }
         
         public void Move()
         {
