@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 204870377614801780}
   - component: {fileID: 204870377614801781}
   - component: {fileID: 1632325314}
+  - component: {fileID: 2136677640388942606}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -114,13 +115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55372e73df049c4097d33709d849635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitMovement:
+  unitUnitMovement:
     collider: {fileID: 204870377614801786}
     rigidbody: {fileID: 204870377614801784}
     meshRotator: {fileID: 204870376255963184}
-    target: {x: 0, y: 0, z: 0}
-    speed: 900
-    rotateSpeed: 200
+    speed: 600
+    rotateSpeed: 3
+  unitFind:
+    findRadius: 0
   unitAnimator:
     animator: {fileID: 6082045017063770264}
     animationEventsListener: {fileID: 8937257030866067900}
@@ -196,6 +198,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffc42c5a31c7f6249bb7cd31c68ad026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2136677640388942606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204870377614801777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bddd19d53c4884c8d3e79673962afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &506340552518384195

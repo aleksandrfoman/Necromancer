@@ -22,6 +22,8 @@ namespace Content.Scripts.PlayerScripts.State
             Machine.PlayerMovement.Rotate();
             Machine.PlayerMovement.Movement();
             Machine.PlayerFollow.UpdatePointMove();
+            
+            Machine.PlayerArmy.TryCaptureUnit();
         }
         
         

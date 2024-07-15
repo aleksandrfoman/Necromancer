@@ -8,6 +8,7 @@ namespace Content.Scripts.Managers
     {
         [SerializeField] private List<UnitBase> deadBodyList = new List<UnitBase>();
         [SerializeField] private List<UnitBase> enemiesList = new List<UnitBase>();
+        [SerializeField] private List<UnitBase> playerUnitList = new List<UnitBase>();
         
         public void Init()
         {
@@ -32,7 +33,7 @@ namespace Content.Scripts.Managers
                     UnitBase curEnemyBase = enemiesList[i];
                     if (curEnemyBase != null)
                     {
-                        float dist = Vector3.Distance(transform.position, curEnemyBase.transform.position);
+                        float dist = Vector3.Distance(pos, curEnemyBase.transform.position);
                         if (dist < tempDist)
                         {
                             tempDist = dist;
@@ -62,7 +63,7 @@ namespace Content.Scripts.Managers
                     UnitBase curEnemyBase = deadBodyList[i];
                     if (curEnemyBase != null)
                     {
-                        float dist = Vector3.Distance(transform.position, curEnemyBase.transform.position);
+                        float dist = Vector3.Distance(pos, curEnemyBase.transform.position);
                         if (dist < tempDist)
                         {
                             tempDist = dist;
@@ -85,12 +86,22 @@ namespace Content.Scripts.Managers
         
         public void AddDeadBody(UnitBase enemyBase)
         {
-            enemiesList.Add(enemyBase);
+            deadBodyList.Add(enemyBase);
         }
 
         public void RemoveDeadBody(UnitBase enemyBase)
         {
-            enemiesList.Remove(enemyBase);
+            deadBodyList.Remove(enemyBase);
+        }
+        
+        public void AddPlayerUnit(UnitBase enemyBase)
+        {
+            playerUnitList.Add(enemyBase);
+        }
+
+        public void RemovePlayerUnit(UnitBase enemyBase)
+        {
+            playerUnitList.Remove(enemyBase);
         }
     }
 }

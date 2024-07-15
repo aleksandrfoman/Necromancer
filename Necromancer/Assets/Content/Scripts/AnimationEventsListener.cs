@@ -8,7 +8,7 @@ namespace Content.Scripts
         public event Action OnAttackComplete;
         public event Action OnHitComplete;
         public event Action OnCatchComplete;
-        public event Action OnJumpComplete;
+        public event Action OnSpawnComplete;
         
         public void AttackComplete()
         {
@@ -25,9 +25,9 @@ namespace Content.Scripts
             OnCatchComplete?.Invoke();   
         }
         
-        public void JumpComplete()
+        public void SpawnComplete()
         {
-            OnJumpComplete?.Invoke();   
+            OnSpawnComplete?.Invoke();   
         }
     }
 }

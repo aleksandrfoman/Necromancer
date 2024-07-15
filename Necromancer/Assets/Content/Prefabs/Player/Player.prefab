@@ -236,10 +236,14 @@ MonoBehaviour:
     rotateSpeed: 12
   playerAnimator:
     animator: {fileID: 7098071291738729732}
+  playerFind:
+    findRadius: 5
   playerFollow:
     followPoint: {fileID: 3990967374607178096}
   playerBar:
     radiusCircle: {fileID: 1436133395}
+  playerArmy:
+    countArmy: 5
   stateMachine: {fileID: 3990967374392515170}
 --- !u!136 &3990967374392515197
 CapsuleCollider:

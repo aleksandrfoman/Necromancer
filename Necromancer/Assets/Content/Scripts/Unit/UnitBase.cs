@@ -6,12 +6,15 @@ namespace Content.Scripts.Unit
 {
     public class UnitBase : MonoBehaviour
     {
-        public UnitMovement Movement => unitMovement;
+        public UnitMovement UnitMovement => unitUnitMovement;
         public UnitAnimator UnitAnimator => unitAnimator;
         public Player Player => player;
+        public UnitFind UnitFind => unitFind;
         public EUnitType UnitType => unitType;
-        
-        [SerializeField] private UnitMovement unitMovement;
+
+
+        [SerializeField] private UnitMovement unitUnitMovement;
+        [SerializeField] private UnitFind unitFind;
         [SerializeField] private UnitAnimator unitAnimator;
         [SerializeField] private UnitStateMachine unitStateMachine;
         [SerializeField] private EUnitType unitType;
@@ -27,6 +30,7 @@ namespace Content.Scripts.Unit
                     unitStateMachine.StartAction(EUnitState.Idle);
                     break;
                 case EUnitType.DeadBody: 
+                    UnitManager.Instance.AddDeadBody(this);
                     unitStateMachine.StartAction(EUnitState.DeadBody);
                     break;
                 case EUnitType.PlayerUnit: break;
@@ -37,7 +41,33 @@ namespace Content.Scripts.Unit
         private void Init(Player player)
         {
             this.player = player;
+            unitAnimator.Init();
             unitStateMachine.Init(this);
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                unitAnimator.PlaySpawn();
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                unitAnimator.PlayRun();
+            }
+        }
+
+        private void OnDestroy()
+        {
+            unitAnimator.Destroy();
+        }
+
+        public void CaptureUnit()
+        {
+            unitType = EUnitType.PlayerUnit;
+            UnitManager.Instance.RemoveDeadBody(this);
+            UnitManager.Instance.AddPlayerUnit(this);
+            unitStateMachine.StartAction(EUnitState.Spawn);
         }
     }
 

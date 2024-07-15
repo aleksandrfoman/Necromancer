@@ -6,11 +6,7 @@ namespace Content.Scripts.Unit
     {
         public override void StateSwitch()
         {
-            if (CurrentStateType == EUnitState.Spawn)
-            {
-                StartAction(EUnitState.Spawn);
-            }
-            else
+            if(CurrentStateType == EUnitState.Spawn)
             {
                 StartAction(EUnitState.Move);
             }

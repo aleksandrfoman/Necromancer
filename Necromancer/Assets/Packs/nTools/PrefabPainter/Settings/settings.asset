@@ -3179,7 +3179,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Mountain_02
@@ -3526,7 +3526,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: 15, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -4798,7 +4798,7 @@ MonoBehaviour:
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
         placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeScale: 1.9
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -5429,8 +5429,8 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeEulerAngles: {x: 0, y: 150, z: 0}
+        placeScale: 2.7
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -9853,7 +9853,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: 105, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -12982,7 +12982,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Plant_01
@@ -15858,7 +15858,7 @@ MonoBehaviour:
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
         placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeScale: 4.5
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -18701,8 +18701,8 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeEulerAngles: {x: 0, y: -105, z: 0}
+        placeScale: 5.3
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -19017,8 +19017,8 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeEulerAngles: {x: 90, y: -90, z: 0}
+        placeScale: 8.900001
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -19965,8 +19965,8 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeEulerAngles: {x: 0, y: 15, z: 0}
+        placeScale: 14.6
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -20282,7 +20282,7 @@ MonoBehaviour:
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
         placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeScale: 9.400001
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -20597,8 +20597,8 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeEulerAngles: {x: 0, y: -45, z: 0}
+        placeScale: 10.900001
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -22177,7 +22177,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: 150, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -22494,7 +22494,7 @@ MonoBehaviour:
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
         placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeScale: 3.2
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -24073,7 +24073,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: -30, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -25660,7 +25660,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: -45, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -28820,7 +28820,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: 45, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -33560,7 +33560,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: 30, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -34824,8 +34824,8 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeEulerAngles: {x: 0, y: 105, z: 0}
+        placeScale: 1.5
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -36057,7 +36057,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 1
+      selected: 0
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Fence_05
@@ -45884,7 +45884,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: -225, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -46200,8 +46200,8 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeEulerAngles: {x: 0, y: 240, z: 0}
+        placeScale: 1.4
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -46485,7 +46485,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Wineglass

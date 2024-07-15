@@ -1,8 +1,34 @@
+using System;
+using Content.Scripts.Managers;
+using Content.Scripts.Unit;
 using UnityEngine;
 namespace Content.Scripts.PlayerScripts
 {
-    public class PlayerArmy : MonoBehaviour
+    [Serializable]
+    public class PlayerArmy
     {
-        
+        public int CountArmy => countArmy;
+        [SerializeField] private int countArmy;
+        private int curArmy;
+        private PlayerFind playerFind;
+   
+        public void Init(PlayerFind playerFind)
+        {
+            this.playerFind = playerFind;
+        }
+
+        public void TryCaptureUnit()
+        {
+            if (curArmy < CountArmy)
+            {
+                UnitBase unitBase = playerFind.FindNearDeadBody();
+                if (unitBase != null)
+                {
+                    curArmy++;
+                    UiManager.Instance.ArmyCounter.UpdateInfo(curArmy,countArmy);
+                    unitBase.CaptureUnit();
+                }
+            }
+        }
     }
 }

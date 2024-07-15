@@ -13,6 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Content/Scripts/Pool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -102,6 +105,8 @@
       <workItem from="1720957156857" duration="2657000" />
       <workItem from="1720960442545" duration="18000" />
       <workItem from="1720960945584" duration="885000" />
+      <workItem from="1720979926447" duration="2655000" />
+      <workItem from="1721029182309" duration="13005000" />
     </task>
     <servers />
   </component>

@@ -13,9 +13,10 @@ namespace Content.Scripts.PlayerScripts
         
         private Transform transform;
         
-        public void Init(Transform transform)
+        public void Init(Transform transform, PlayerBar playerBar)
         {
             this.transform = transform;
+            playerBar.ChangeCircleRange(findRadius);
         }
         
         public UnitBase FindNearEnemy()
