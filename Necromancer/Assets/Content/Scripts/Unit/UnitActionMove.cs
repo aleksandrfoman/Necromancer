@@ -15,15 +15,29 @@ namespace Content.Scripts.Unit
         {
             Machine.UnitMovement.SetTarget(Machine.Player.transform.position);
             Machine.UnitMovement.Gravity();
-            Machine.UnitMovement.Rotate(Machine.Player.PlayerMovement.Forward);
             Machine.UnitMovement.Move();
-            if (Machine.UnitMovement.IsMove)
+
+            if (Machine.UnitMovement.CheckDistanceToTarget(Machine.Player.PlayerFind.FindRadius))
+            {
+                Machine.UnitMovement.Rotate(Machine.Player.PlayerMovement.Forward);
+            }
+            else
+            {
+                Machine.UnitMovement.RotateToTarget(Machine.Player.transform.position);
+            }
+            
+            if (Machine.UnitMovement.IsMove())
             {
                 Machine.UnitAnimator.PlayRun();
             }
             else
             {
                 Machine.UnitAnimator.PlayIdle();
+            }
+
+            if (Machine.UnitFind.HasFoundEnemy())
+            {
+                EndState();
             }
         }
     }

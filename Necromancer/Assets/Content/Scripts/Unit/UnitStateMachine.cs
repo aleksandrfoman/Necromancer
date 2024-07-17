@@ -6,9 +6,27 @@ namespace Content.Scripts.Unit
     {
         public override void StateSwitch()
         {
-            if(CurrentStateType == EUnitState.Spawn)
+            if (Machine.UnitType == EUnitType.PlayerUnit)
             {
-                StartAction(EUnitState.Move);
+                if (CurrentStateType == EUnitState.Move)
+                {
+                    StartAction(EUnitState.ChaseAttack);
+                }
+                else
+                {
+                    StartAction(EUnitState.Move);
+                }
+            }
+            if (Machine.UnitType == EUnitType.Enemy)
+            {
+                if (CurrentStateType == EUnitState.Idle)
+                {
+                    StartAction(EUnitState.ChaseAttack);
+                }
+                else
+                {
+                    StartAction(EUnitState.Idle);
+                }
             }
         }
     }

@@ -10,6 +10,7 @@ namespace Content.Scripts.PlayerScripts
         public PlayerAnimator PlayerAnimator => playerAnimator;
         public PlayerFollow PlayerFollow => playerFollow;
         public PlayerArmy PlayerArmy => playerArmy;
+        public PlayerFind PlayerFind => playerFind;
 
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private PlayerAnimator playerAnimator;

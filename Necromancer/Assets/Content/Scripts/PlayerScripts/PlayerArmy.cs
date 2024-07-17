@@ -25,10 +25,20 @@ namespace Content.Scripts.PlayerScripts
                 if (unitBase != null)
                 {
                     curArmy++;
-                    UiManager.Instance.ArmyCounter.UpdateInfo(curArmy,countArmy);
+                    UpdateArmyInfo();
                     unitBase.CaptureUnit();
                 }
             }
+        }
+
+        public void RemoveArmyUnit()
+        {
+            curArmy--;
+        }
+
+        public void UpdateArmyInfo()
+        {
+            UiManager.Instance.ArmyCounter.UpdateInfo(curArmy,countArmy);
         }
     }
 }

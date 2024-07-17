@@ -6,15 +6,19 @@ namespace Content.Scripts.Unit
     [Serializable]
     public class UnitMovement
     {
-        public bool IsMove => rigidbody.velocity.magnitude >= 0.75f;
-
+        public PointMover PointMover => pointMover;
+        [SerializeField] private PointMover pointMover;
         [SerializeField] private Collider collider;
         [SerializeField] private Rigidbody rigidbody;
         [SerializeField] private Transform meshRotator; 
         [SerializeField] private float speed;
         [SerializeField] private float rotateSpeed;
-        
         private Vector3 target;
+
+        public void InitPointMove(PointMover pointMover)
+        {
+            this.pointMover = pointMover;
+        }
         public void EnableMovement(bool value)
         {
             rigidbody.isKinematic = !value;
@@ -24,16 +28,27 @@ namespace Content.Scripts.Unit
         {
             collider.enabled = value;
         }
-        
-        public void Move()
+
+        public bool IsMove(float magn = 0.75f)
+        { 
+            return rigidbody.velocity.magnitude >= magn;
+        }
+
+        public void ResetVelocity()
         {
-            float velocitySclaer = 1.5f;
-            rigidbody.velocity *= 1f - (velocitySclaer * Time.deltaTime);
-            rigidbody.angularVelocity *= 1f - (velocitySclaer * Time.deltaTime);
+            rigidbody.velocity = Vector3.zero;
+        }
+        
+        public void Move(float scale = 1.5f)
+        {
+            float velocityScaler = scale;
+            rigidbody.velocity *= 1f - (velocityScaler * Time.deltaTime);
+            rigidbody.angularVelocity *= 1f - (velocityScaler * Time.deltaTime);
             
             Vector3 targetDir = target - rigidbody.transform.position;
             rigidbody.AddForce(targetDir.normalized*speed*Time.deltaTime, ForceMode.Force);
         }
+        
         
         public void Rotate()
         {
@@ -66,7 +81,7 @@ namespace Content.Scripts.Unit
             var nextRot = Quaternion.Euler(new Vector3(0, angle, 0));
             meshRotator.rotation = Quaternion.Lerp(meshRotator.rotation, nextRot, rotateSpeed * Time.deltaTime);
         }
-
+        
         public void SetTarget(Vector3 pos)
         {
             target = pos;

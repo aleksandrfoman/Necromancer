@@ -31,7 +31,7 @@ namespace Content.Scripts.Managers
                 for (int i = 0; i < enemiesList.Count; i++)
                 {
                     UnitBase curEnemyBase = enemiesList[i];
-                    if (curEnemyBase != null)
+                    if (curEnemyBase != null && !curEnemyBase.IsDead)
                     {
                         float dist = Vector3.Distance(pos, curEnemyBase.transform.position);
                         if (dist < tempDist)
@@ -62,6 +62,35 @@ namespace Content.Scripts.Managers
                 {
                     UnitBase curEnemyBase = deadBodyList[i];
                     if (curEnemyBase != null)
+                    {
+                        float dist = Vector3.Distance(pos, curEnemyBase.transform.position);
+                        if (dist < tempDist)
+                        {
+                            tempDist = dist;
+                            enemyBase = curEnemyBase;
+                        }
+                    }
+                }
+            }
+            return enemyBase;
+        }
+        
+        public UnitBase FindNearPlayerUnit(Vector3 pos, float findRadius)
+        {
+            if (playerUnitList.Count < 0)
+            {
+                return null;
+            }
+            
+            float tempDist = findRadius;
+            UnitBase enemyBase = null;
+
+            if (playerUnitList.Count > 0)
+            {
+                for (int i = 0; i < playerUnitList.Count; i++)
+                {
+                    UnitBase curEnemyBase = playerUnitList[i];
+                    if (curEnemyBase != null && !curEnemyBase.IsDead)
                     {
                         float dist = Vector3.Distance(pos, curEnemyBase.transform.position);
                         if (dist < tempDist)

@@ -14,6 +14,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Content/Scripts/MeshFlash.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Content/Scripts/Pool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -107,6 +108,9 @@
       <workItem from="1720960945584" duration="885000" />
       <workItem from="1720979926447" duration="2655000" />
       <workItem from="1721029182309" duration="13005000" />
+      <workItem from="1721115945440" duration="8658000" />
+      <workItem from="1721125519373" duration="2970000" />
+      <workItem from="1721133400934" duration="13293000" />
     </task>
     <servers />
   </component>

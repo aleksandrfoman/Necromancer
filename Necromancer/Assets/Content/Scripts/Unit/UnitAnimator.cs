@@ -12,28 +12,49 @@ namespace Content.Scripts.Unit
         public void Init()
         {
             animationEventsListener.OnSpawnComplete += SpawnComplete;
+            animationEventsListener.OnAttackComplete += AttackComplete;
         }
         
         public void Destroy()
         {
             animationEventsListener.OnSpawnComplete -= SpawnComplete;
+            animationEventsListener.OnAttackComplete -= AttackComplete;
         }
         
         public void PlayIdle()
         {
             animator.SetBool("IsRun",false);
             ResetLayes();
-            EnableLayerAttack(false);
             EnableLayerDeadBody(false);
         }
         public void PlayRun()
         {
             animator.SetBool("IsRun",true);
             ResetLayes();
-            EnableLayerAttack(false);
             EnableLayerDeadBody(false);
         }
+        
+        public bool IsAttackComplete => isAttackComplete;
+        private bool isAttackComplete;
+        public void PlayAttack()
+        {
+            isAttackComplete = false;
+            ResetLayes();
+            EnableLayerDeadBody(false);
+            animator.SetTrigger("AttackTrigger");
+        }
+        
+        private void AttackComplete()
+        {
+            isAttackComplete = true;
+        }
 
+        public void PlayDead()
+        {
+            animator.SetTrigger("DeadTrigger");
+            ResetLayes();
+            EnableLayerDeadBody(true);
+        }
         #region Layers
 
         public void ResetLayes()
@@ -67,7 +88,7 @@ namespace Content.Scripts.Unit
         #endregion
 
         
-        #region Jump
+        #region Spawn
         
         public bool IsSpawnComplete => isSpawnComplete;
         private bool isSpawnComplete;
@@ -76,7 +97,6 @@ namespace Content.Scripts.Unit
         {
             isSpawnComplete = false;
             ResetLayes();
-            EnableLayerAttack(false);
             EnableLayerDeadBody(true);
             animator.SetTrigger("SpawnTrigger");
         }
@@ -86,6 +106,7 @@ namespace Content.Scripts.Unit
             isSpawnComplete = true;
         }
 
+    
         #endregion
     }
 }

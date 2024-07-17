@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 204870377614801784}
   - component: {fileID: 204870377614801786}
   - component: {fileID: 204870377614801783}
+  - component: {fileID: 3144010169147303719}
   - component: {fileID: 204870377614801782}
   - component: {fileID: 204870377614801785}
   - component: {fileID: 204870377614801780}
@@ -122,12 +123,49 @@ MonoBehaviour:
     speed: 600
     rotateSpeed: 3
   unitFind:
-    findRadius: 0
+    maxTargetCount: 0
+    findRadius: 5
   unitAnimator:
     animator: {fileID: 6082045017063770264}
     animationEventsListener: {fileID: 8937257030866067900}
+  unitAttack:
+    cdAttack: 1.2
+    damage: 1
+    distanceAttack: 1.25
+  unitHealth:
+    maxHealth: 4
+    meshFlash: {fileID: 3144010169147303719}
+  unitSkin:
+    materialPlayer: {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
+    materialEnemy: {fileID: 2100000, guid: 9ac1e7b459610d948adc707055ce24be, type: 2}
+    renderers:
+    - {fileID: 4727180976977502927}
+    - {fileID: 7755975795675921130}
+    - {fileID: 4048271205807738911}
+    - {fileID: 4029307006611168096}
   unitStateMachine: {fileID: 204870377614801782}
   unitType: 2
+--- !u!114 &3144010169147303719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204870377614801777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e18b2b2912b2c4e93b1b6ecf3f18c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 4727180976977502927}
+  - {fileID: 7755975795675921130}
+  - {fileID: 4048271205807738911}
+  - {fileID: 4029307006611168096}
+  color: {r: 1, g: 0, b: 0, a: 1}
+  blinkCount: 1
+  blinkDelay: 0
+  blinkDuration: 0.2
 --- !u!114 &204870377614801782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +187,8 @@ MonoBehaviour:
     stateAction: {fileID: 204870377614801781}
   - stateType: 3
     stateAction: {fileID: 1632325314}
+  - stateType: 4
+    stateAction: {fileID: 2136677640388942606}
   startAction: 0
   currentAction: {fileID: 204870377614801780}
   lastStateKey: 0
@@ -360,7 +400,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38bd75ac464d4484fa716e40e63f9831, type: 2}
+  - {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -769,7 +809,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38bd75ac464d4484fa716e40e63f9831, type: 2}
+  - {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1331,7 +1371,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38bd75ac464d4484fa716e40e63f9831, type: 2}
+  - {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1572,8 +1612,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38bd75ac464d4484fa716e40e63f9831, type: 2}
-  - {fileID: 2100000, guid: 742e6525fc65f9a49812bcb24e24fce8, type: 2}
+  - {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
+  - {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1683,7 +1723,7 @@ PrefabInstance:
     - target: {fileID: 211060118000718597, guid: a8cc610235c43164cb7d9665673d0322,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: 211060118000718597, guid: a8cc610235c43164cb7d9665673d0322,
         type: 3}
@@ -1735,6 +1775,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: sword_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 8097191268187206699, guid: a8cc610235c43164cb7d9665673d0322,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
+    - target: {fileID: 8097191268187206699, guid: a8cc610235c43164cb7d9665673d0322,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
+    - target: {fileID: 8097191268187206699, guid: a8cc610235c43164cb7d9665673d0322,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23fd10ac88b00ae47bbc398d338438bb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8cc610235c43164cb7d9665673d0322, type: 3}
 --- !u!4 &16341536713026420 stripped

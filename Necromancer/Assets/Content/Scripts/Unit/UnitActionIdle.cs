@@ -5,16 +5,45 @@ namespace Content.Scripts.Unit
     {
         private Vector3 randomTarget;
         private float curCrRotate;
+        private PointMover pointMover;
         
         public override void StartState()
         {
             base.StartState();
+
             Machine.UnitAnimator.PlayIdle();
+            pointMover = Machine.UnitMovement.PointMover;
+            Machine.UnitMovement.EnableMovement(pointMover != null);
+
         }
         
         public override void ProcessState()
         {
-            RandomRotate();
+            if (pointMover != null)
+            {
+                Machine.UnitMovement.SetTarget(pointMover.transform.position);
+                Machine.UnitMovement.Gravity();
+                Machine.UnitMovement.Move(); 
+                Machine.UnitMovement.Rotate(pointMover.transform.forward);
+        
+                if (Machine.UnitMovement.IsMove())
+                {
+                    Machine.UnitAnimator.PlayRun();
+                }
+                else
+                {
+                    Machine.UnitAnimator.PlayIdle();
+                }
+            }
+            else
+            {
+                RandomRotate();
+            }
+            
+            if (Machine.UnitFind.HasFoundEnemy())
+            {
+                EndState();
+            }
         }
 
         private void RandomRotate()
